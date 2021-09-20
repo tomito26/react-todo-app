@@ -41,17 +41,24 @@ function App() {
      const newTask = [...tasks, { text }];
      setTasks(newTask);
   }
+
   const completeTask =  index =>{
     const newTasks = [...tasks];
     newTasks[index].isCompleted = true;
-    setTasks(newTasks)
+    setTasks(newTasks);
   };
+
+  const deleteTask = index =>{
+    const newTasks = [...tasks];
+    newTasks.splice(index,1);
+    setTasks(newTasks)
+  }
     
   return (
     <div className="container">
       <Header dayActivity={dayActivity} tasks={tasks} />
       <TodoForm addTodo={addTodo}/>
-      <Tasks tasks={tasks} completeTask={completeTask} /> 
+      <Tasks tasks={tasks} completeTask={completeTask}  onDelete={deleteTask}/> 
     </div>
   );
 }

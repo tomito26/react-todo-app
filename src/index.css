@@ -94,6 +94,10 @@ form .btn{
 .list-group-item:first-child{
   border-top: 1px solid #ccc;
 }
+.list-group-item i{
+  float: right;
+  margin-left: 10px;
+}
 .list-group-item .complete{
   float: right;
   padding: 4px 8px;
