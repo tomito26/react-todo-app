@@ -1,7 +1,7 @@
 
 
 function Header({dayActivity,tasks}){
-    let completeTask = tasks.filter(task=>task.complete !== true)
+    let completeTask = tasks.filter(task=>task.iscomplete !== true)
     console.log(completeTask.length)
  
     return(

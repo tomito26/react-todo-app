@@ -94,8 +94,9 @@ form .btn{
 .list-group-item:first-child{
   border-top: 1px solid #ccc;
 }
-.list-group-item i{
+.list-group-item .complete{
   float: right;
-  /* color: #343a40; */
+  padding: 4px 8px;
   cursor: pointer;
+  font-weight: 700;
 }

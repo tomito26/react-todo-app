@@ -17,37 +17,41 @@ function App() {
     [
       {
         text:"Learn React",
-        iscomplete:false
+        isCompleted:false
       },
       {
         text:"Attend JavaScript Confrence",
-        iscomplete:false
+        isCompleted:false
       },
       {
         text:"Particpate in Oracle Hackathon",
-        iscomplete:false,
+        isCompleted:false,
       },
       {
         text:"Meet the optician",
-        iscomplete:false,
+        isCompleted:false,
       },
       {
         text:"Play Fifa",
-        oscomplete:false,
+        isCompleted:false,
       }
     ]
   )
   const addTodo = text=>{ 
      const newTask = [...tasks, { text }];
-     setTasks(newTask)
+     setTasks(newTask);
   }
+  const completeTask =  index =>{
+    const newTasks = [...tasks];
+    newTasks[index].isCompleted = true;
+    setTasks(newTasks)
+  };
     
   return (
     <div className="container">
       <Header dayActivity={dayActivity} tasks={tasks} />
       <TodoForm addTodo={addTodo}/>
-      {tasks.length > 0 ?<Tasks tasks={tasks} /> :"No Task to show"}
-    
+      <Tasks tasks={tasks} completeTask={completeTask} /> 
     </div>
   );
 }
