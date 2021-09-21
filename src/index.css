@@ -97,6 +97,7 @@ form .btn{
 .list-group-item i{
   float: right;
   margin-left: 10px;
+  cursor: pointer;
 }
 .list-group-item .complete{
   float: right;
