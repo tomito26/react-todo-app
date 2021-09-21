@@ -4,7 +4,7 @@ function Task({task,index,completeTask,onDelete}){
     return(
         <li className="list-group-item" style={{textDecoration: task.isCompleted ? "line-through" : "" }}>
             {task.text}
-            <i class="fas fa-trash-alt" onClick={onDelete}></i>
+            <i className="fas fa-trash-alt" onClick={()=>onDelete(index)}></i>
             <button className="complete" onClick={() =>completeTask(index)}> complete</button>
             
         </li>
